@@ -2,11 +2,23 @@ import { useState } from 'react';
 import companyLogo from '../../assets/Logo/NextGig.png'
 import Buttons from '../UI/Buttons'
 import UserAvatar from '../UI/UserAvatar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 export default function NavigationBar() {
+    const { user, logOut } = useAuth();
     const [toggle, setToggle] = useState(false)
-    const user = true;
+    const navigate = useNavigate();
+    console.log(user)
+
+    // handle sign out button
+    const signOutBtn = () => {
+        logOut()
+            .then(() => {
+                navigate('/signIn')
+            })
+            .catch(error => console.log(error))
+    }
 
     // handleToggleBtn
     const handleToggleBtn = () => {
@@ -84,22 +96,26 @@ export default function NavigationBar() {
             </div>
             <div className="navbar-end hidden lg:flex">
                 {
-                    user ? <div className="flex gap-4">
-                        <Link to={"/signIn"}>
-                            <Buttons value={'Sign In'} />
-                        </Link>
-                        <Link to={"/signUp"}>
-                            <Buttons value={'Sign Up'} />
-                        </Link>
-
-                    </div> :
+                    user?.email ?
                         <>
-                            <Buttons value={'Sign Out'} />
-                            {user?.email ?
+                            <Buttons handler={signOutBtn} value={'Sign Out'} />
+                            {user?.photoURL ?
                                 <UserAvatar type={'withPic'} />
                                 :
-                                <UserAvatar sortName={'MH'} />}
-                        </>
+                                <UserAvatar />
+                            }
+                        </> :
+                        <div className="flex gap-4">
+                            <Link to={"/signIn"}>
+                                <Buttons value={'Sign In'} />
+                            </Link>
+                            <Link to={"/signUp"}>
+                                <Buttons value={'Sign Up'} />
+                            </Link>
+
+
+                        </div>
+
                 }
             </div>
         </div>

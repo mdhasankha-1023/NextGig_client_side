@@ -5,7 +5,7 @@ import PrimaryTitle from "./PrimaryTitle";
 import SocialMedeaButton from "./SocialMedeaButton";
 
 // eslint-disable-next-line react/prop-types
-export default function Form({ type }) {
+export default function Form({ type, onGoogle, onFacebook, onInput }) {
     return (
         <div>
             <div className="hero h-screen bg-base-200">
@@ -17,7 +17,9 @@ export default function Form({ type }) {
                                 <>
                                     <PrimaryTitle text={'Create Account'} />
                                     {/* sign Up */}
-                                    <form className="card-body gap-6">
+                                    <form 
+                                    onSubmit={onInput}
+                                    className="card-body gap-6">
                                         {/* username */}
                                         <InputFiled icon={'user'} type={'text'} name={'userName'} placeholder={'Username'} />
 
@@ -32,24 +34,30 @@ export default function Form({ type }) {
                                         {/* confirm password */}
                                         <InputFiled
                                             icon={'password'}
-                                            type={'password'} name={'password'} placeholder={'Confirm Password'} />
+                                            type={'password'} placeholder={'Confirm Password'} />
 
                                         <div className="form-control mt-6">
-                                            <Buttons value={'Sign Up'} />
+                                            <Buttons type={'submit'} value={'Sign Up'} />
                                         </div>
                                     </form>
                                     <p className="text-center">You have an account? <Link className="text-xl underline" to={'/signIn'}>Sign in</Link>
                                     </p>
                                     <div className="mt-6 px-8 w-full flex flex-col gap-6 justify-center items-center">
-                                        <SocialMedeaButton text={'SignUp with Google'} icon={'google'} />
-                                        <SocialMedeaButton text={'SignUp with facebook'} icon={'facebook'} />
+                                        <SocialMedeaButton
+                                        handler={onGoogle}
+                                        text={'SignUp with Google'} icon={'google'} />
+                                        <SocialMedeaButton 
+                                        handler={onFacebook}
+                                        text={'SignUp with facebook'} icon={'facebook'} />
                                     </div>
                                 </>
                                 :
                                 <>
                                     <PrimaryTitle text={'Sign In'} />
                                     {/* sign In */}
-                                    <form className="card-body gap-6">
+                                    <form 
+                                    onSubmit={onInput}
+                                    className="card-body gap-6">
 
                                         {/* email */}
                                         <InputFiled icon={'email'} type={'email'} name={'email'} placeholder={'Email'} />
@@ -60,7 +68,7 @@ export default function Form({ type }) {
                                             type={'password'} name={'password'} placeholder={'Password'} />
 
                                         <div className="form-control mt-6">
-                                            <Buttons value={'Sign In'} />
+                                            <Buttons type={'submit'} value={'Sign In'} />
                                         </div>
                                     </form>
                                     <p className="text-center">You have no account? <Link className="text-xl underline text-center" to={'/signUp'}>Sign Up</Link>
