@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    colors:{
+      "primaryBtn" : '#1967D2'
+    }
   },
   plugins: [
     // eslint-disable-next-line no-undef
