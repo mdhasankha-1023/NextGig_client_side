@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {},
     colors:{
-      "primaryBtn" : '#1967D2'
+      "primaryBtn" : '#1967D2',
+      "primaryBg" : '#1967D2'
     }
   },
   plugins: [
