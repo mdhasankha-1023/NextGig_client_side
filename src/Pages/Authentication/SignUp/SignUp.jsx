@@ -1,6 +1,9 @@
+import Form from "../../../Components/UI/Form";
 
 export default function SignUp() {
   return (
-    <div>SignUp</div>
+    <div>
+      <Form type={'signUp'}/>
+    </div>
   )
 }

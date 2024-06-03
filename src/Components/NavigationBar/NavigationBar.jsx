@@ -2,10 +2,11 @@ import { useState } from 'react';
 import companyLogo from '../../assets/Logo/NextGig.png'
 import Buttons from '../UI/Buttons'
 import UserAvatar from '../UI/UserAvatar';
+import { Link } from 'react-router-dom';
 
 export default function NavigationBar() {
     const [toggle, setToggle] = useState(false)
-    const user = false;
+    const user = true;
 
     // handleToggleBtn
     const handleToggleBtn = () => {
@@ -36,19 +37,19 @@ export default function NavigationBar() {
             <li><a>Item 3</a></li>
             <li><a>Item 3</a></li>
             <li>
-            {
-                user ? <div className="flex flex-col justify-center items-center gap-4">
+                {
+                    user ? <div className="flex flex-col justify-center items-center gap-4">
 
-                    <Buttons value={'Sign In'} />
-                    <Buttons value={'Sign Up'} />
-                </div> :
-                    <>
-                        <Buttons value={'Sign Out'} />
+                        <Buttons value={'Sign In'} />
+                        <Buttons value={'Sign Up'} />
+                    </div> :
+                        <>
+                            <Buttons value={'Sign Out'} />
 
-                    </>
-            }
+                        </>
+                }
             </li>
-            
+
         </>
     )
 
@@ -84,9 +85,13 @@ export default function NavigationBar() {
             <div className="navbar-end hidden lg:flex">
                 {
                     user ? <div className="flex gap-4">
+                        <Link to={"/signIn"}>
+                            <Buttons value={'Sign In'} />
+                        </Link>
+                        <Link to={"/signUp"}>
+                            <Buttons value={'Sign Up'} />
+                        </Link>
 
-                        <Buttons value={'Sign In'} />
-                        <Buttons value={'Sign Up'} />
                     </div> :
                         <>
                             <Buttons value={'Sign Out'} />
