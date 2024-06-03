@@ -9,7 +9,7 @@ export default function Form({ type }) {
     return (
         <div>
             <div className="hero h-screen bg-base-200">
-                <div className="hero-content w-2/5">
+                <div className="hero-content lg:w-2/5 w-full">
                     <div className="card w-full shadow-2xl bg-base-100 py-8">
                         {
                             type === 'signUp' ?
@@ -40,7 +40,7 @@ export default function Form({ type }) {
                                     </form>
                                     <p className="text-center">You have an account? <Link className="text-xl underline" to={'/signIn'}>Sign in</Link>
                                     </p>
-                                    <div className="mt-6 w-full flex flex-col gap-6 justify-center items-center">
+                                    <div className="mt-6 px-8 w-full flex flex-col gap-6 justify-center items-center">
                                         <SocialMedeaButton text={'SignUp with Google'} icon={'google'} />
                                         <SocialMedeaButton text={'SignUp with facebook'} icon={'facebook'} />
                                     </div>
@@ -65,7 +65,7 @@ export default function Form({ type }) {
                                     </form>
                                     <p className="text-center">You have no account? <Link className="text-xl underline text-center" to={'/signUp'}>Sign Up</Link>
                                     </p>
-                                    <div className="mt-6 w-full flex flex-col gap-6 justify-center items-center">
+                                    <div className="mt-6 px-8 w-full flex flex-col gap-6 justify-center items-center">
                                         <SocialMedeaButton text={'SignIn with Google'} icon={'google'} />
                                         <SocialMedeaButton text={'SignIn with facebook'} icon={'facebook'} />
                                     </div>

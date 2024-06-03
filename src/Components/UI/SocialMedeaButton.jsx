@@ -10,12 +10,10 @@ export default function SocialMedeaButton({ text, icon }) {
   const google = ggl;
 
   return (
-    <div>
-      <button className="btn">
+      <button className="btn w-full">
         <img className='w-[40px] h-[40px]' src={icon === 'google' ? google : facebook} alt="facebook" />
         {text}
       </button>
-    </div>
 
   )
 }
