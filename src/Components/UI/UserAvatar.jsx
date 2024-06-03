@@ -4,8 +4,8 @@ import useAuth from "../../Hooks/useAuth"
 export default function UserAvatar({type}) {
     const {user} = useAuth();
 
-    const first = user?.displayName[0]
-    const sortName = first + user?.displayName[1]
+    const first = user?.displayName[0];
+    const sortName = first + user?.displayName[1];
 
 
     return (
