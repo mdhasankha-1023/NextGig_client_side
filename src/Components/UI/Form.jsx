@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Buttons from "./Buttons";
 import InputFiled from "./InputFiled";
 import PrimaryTitle from "./PrimaryTitle";
+import SocialMedeaButton from "./SocialMedeaButton";
 
 // eslint-disable-next-line react/prop-types
 export default function Form({ type }) {
@@ -39,11 +40,15 @@ export default function Form({ type }) {
                                     </form>
                                     <p className="text-center">You have an account? <Link className="text-xl underline" to={'/signIn'}>Sign in</Link>
                                     </p>
+                                    <div className="mt-6 w-full flex flex-col gap-6 justify-center items-center">
+                                        <SocialMedeaButton text={'SignUp with Google'} icon={'google'} />
+                                        <SocialMedeaButton text={'SignUp with facebook'} icon={'facebook'} />
+                                    </div>
                                 </>
                                 :
                                 <>
-                                <PrimaryTitle text={'Sign In'}/>
-                                {/* sign In */}
+                                    <PrimaryTitle text={'Sign In'} />
+                                    {/* sign In */}
                                     <form className="card-body gap-6">
 
                                         {/* email */}
@@ -60,6 +65,10 @@ export default function Form({ type }) {
                                     </form>
                                     <p className="text-center">You have no account? <Link className="text-xl underline text-center" to={'/signUp'}>Sign Up</Link>
                                     </p>
+                                    <div className="mt-6 w-full flex flex-col gap-6 justify-center items-center">
+                                        <SocialMedeaButton text={'SignIn with Google'} icon={'google'} />
+                                        <SocialMedeaButton text={'SignIn with facebook'} icon={'facebook'} />
+                                    </div>
                                 </>
                         }
                     </div>
