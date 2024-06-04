@@ -6,7 +6,7 @@ import bg_img from '../../assets/Background/background_Banner.jpg'
 export default function Banner() {
     return (
         <div className="hero min-h-screen" style={{ backgroundImage: `url(${bg_img})` }}>
-            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-overlay bg-opacity-70"></div>
             <div className="hero-content text-center text-neutral-content w-full">
                 <div className="w-4/5 flex flex-col gap-6 justify-center">
                     <h1 className="mb-5 text-6xl font-bold">Find The Best job</h1>

@@ -28,8 +28,11 @@ export default function NavigationBar() {
     // nav links
     const lgNavLinks = (
         <>
-            <li><a>Item 1</a></li>
-            <li><a>Item 1</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/dashboard">Find Jobs</Link></li>
+            <li><Link to="/dashboard">Employers</Link></li>
+            <li><Link to="/dashboard">Candidates</Link></li>
+            <li><Link to="/dashboard">Blog</Link></li>
             <li><Link to="/dashboard">Dashboard</Link></li>
         </>
     )
@@ -90,7 +93,7 @@ export default function NavigationBar() {
             <div className="navbar-center hidden lg:flex">
 
                 {/* large device nav link */}
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 text-[#fff] text-xl">
                     {lgNavLinks}
                 </ul>
             </div>
