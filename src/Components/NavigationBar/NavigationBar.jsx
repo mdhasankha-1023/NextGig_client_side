@@ -68,13 +68,13 @@ export default function NavigationBar() {
 
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-none fixed top-0">
             <div className="lg:navbar-start justify-between">
 
                 {/* company logo */}
-                <a className="btn btn-ghost text-xl">
-                    <img className='w-[250px] h-[#150px]' src={companyLogo} alt="company logo" />
-                </a>
+                <Link to={'/'}>
+                    <img className='w-[250px] h-full' src={companyLogo} alt="company logo" />
+                </Link>
 
                 <div className="dropdown">
                     {/* toggle icon */}

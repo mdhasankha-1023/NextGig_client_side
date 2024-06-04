@@ -11,8 +11,8 @@ export default function DashboardLayout() {
   // nav links
   const navLinks = (
     <>
-    <li><Link><RiDashboardFill />User Dashboard</Link></li>
-    <li><Link><CgProfile />Profile</Link></li>
+    <li><Link to={'/dashboard'}><RiDashboardFill />User Dashboard</Link></li>
+    <li><Link to={'/dashboard/user-profile'}><CgProfile />Profile</Link></li>
     </>
   )
 
@@ -29,7 +29,7 @@ export default function DashboardLayout() {
         <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
           {/* Sidebar content here */}
           <div className="flex flex-col gap-2 justify-center items-center">
-            <UserAvatar type={'withPic'}/>
+            <UserAvatar size={'w-16'} type={'withPic'}/>
             <h1>{user?.displayName}</h1>
             <p>{user?.email}</p>
           </div>

@@ -1,7 +1,7 @@
 import useAuth from "../../Hooks/useAuth"
 
 // eslint-disable-next-line react/prop-types
-export default function UserAvatar({type}) {
+export default function UserAvatar({type, size}) {
     const {user} = useAuth();
 
     const first = user?.displayName[0];
@@ -11,7 +11,7 @@ export default function UserAvatar({type}) {
     return (
         <>{type === 'withPic' ?
             <div className="avatar">
-                <div className="w-16 rounded-full">
+                <div className={`${size} rounded-full`}>
                     <img src={user?.photoURL} />
                 </div>
             </div>

@@ -6,12 +6,20 @@ import SignIn from "../Pages/Authentication/SignIn/SignIn";
 import SignUp from "../Pages/Authentication/SignUp/SignUp";
 import DashboardLayout from "../Layouts/DashboardLayout/DashboardLayout";
 import DashBoard from "../Pages/DashBoardPages/DashBoard";
+import UserProfile from "../Pages/DashBoardPages/UserProfile";
+import Home from "../Pages/Home/Home";
 
 export const router = createBrowserRouter([
   // main layout
   {
     path: "/",
     element: <MainLayout/>,
+    children: [
+      {
+        path: '/',
+        element: <Home/>
+      }
+    ]
   },
 
   // dashboard layout
@@ -22,7 +30,11 @@ export const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <DashBoard/>
-      }
+      },
+      {
+        path: '/dashboard/user-profile',
+        element: <UserProfile/>
+      },
     ]
   },
 
