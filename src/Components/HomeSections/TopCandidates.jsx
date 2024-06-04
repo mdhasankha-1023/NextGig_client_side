@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import CandidateCard from "../UI/CandidateCard";
 import PrimaryTitle from "../UI/PrimaryTitle";
+import Buttons from "../UI/Buttons";
+import { Link } from "react-router-dom";
 
 export default function TopCandidates() {
   const [candidates, setCandidates] = useState([]);
@@ -22,11 +24,16 @@ export default function TopCandidates() {
       <div className="grid grid-cols-3 gap-x-8">
         {
           candidates
-          ?.slice(0, 3)
-          ?.map(candidate => <CandidateCard key={candidate.id}
-            candidate={candidate}
-          />)
+            ?.slice(0, 3)
+            ?.map(candidate => <CandidateCard key={candidate.id}
+              candidate={candidate}
+            />)
         }
+      </div>
+      <div className="my-8 text-center">
+        <Link to={'/find-candidates'}>
+          <Buttons value={'Load More Listing'} />
+        </Link>
       </div>
     </div>
   )

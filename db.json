@@ -216,6 +216,56 @@
                 }
             ]
         }
+    ],
+    "reviews": [
+        {
+            "id": 1,
+            "userName": "EmmaSmith123",
+            "userPic": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+            "profession": "Hair Stylist",
+            "reviewText": "Absolutely loved my experience! Emma did wonders with my hair, exactly what I wanted. She's friendly, professional, and truly talented. Highly recommend!",
+            "rating": 5
+        },
+        {
+            "id": 2,
+            "userName": "JohnDoe456",
+            "userPic": "https://storyblok-cdn.photoroom.com/f/191576/1000x1000/38dc8dba9a/light_blue_background.webp/m/filters:quality(75)",
+            "profession": "Manicurist",
+            "reviewText": "Had a great time getting my nails done here. John was meticulous and made sure my nails looked perfect. The salon is clean and the staff are all very welcoming.",
+            "rating": 4
+        },
+        {
+            "id": 3,
+            "userName": "SarahParker789",
+            "userPic": "https://media.licdn.com/dms/image/D4D03AQFKaV5CBRa02Q/profile-displayphoto-shrink_400_400/0/1665170161440?e=2147483647&v=beta&t=l5ntVKIKv9jw3BzCEzlc1kvUmeD7IBNMwuRXwLGbAsc",
+            "profession": "Makeup Artist",
+            "reviewText": "Sarah did my makeup for a special event and I felt like a million bucks! She listened to what I wanted and delivered beyond my expectations. Will definitely be returning!",
+            "rating": 5
+        },
+        {
+            "id": 4,
+            "userName": "DavidJohnson101",
+            "userPic": "https://media.licdn.com/dms/image/D5603AQEBAa5-yXCr2A/profile-displayphoto-shrink_400_400/0/1708694272691?e=2147483647&v=beta&t=Ogeqw77-6dcurRDE1__PjYXDGkwnWWhTMyKW_kFk5D0",
+            "profession": "Masseuse",
+            "reviewText": "Had a fantastic massage session with David. He's very skilled and helped me relieve all my tension. The ambiance of the spa was calming and soothing. Highly recommend!",
+            "rating": 5
+        },
+        {
+            "id": 5,
+            "userName": "EmilyWilson777",
+            "userPic": "https://media.licdn.com/dms/image/D4D03AQGflfU4uZNFgg/profile-displayphoto-shrink_400_400/0/1692123245905?e=2147483647&v=beta&t=Kh6lBHUC-arn4MHeh6pJNc95pVEQD9XwYjv_ovvPnjQ",
+            "profession": "Esthetician",
+            "reviewText": "Emily did a wonderful job with my facial. She's knowledgeable about skincare and gave me great advice on maintaining healthy skin. My skin feels amazing after the treatment.",
+            "rating": 4
+        },
+        {
+            "id": 6,
+            "userName": "MichaelBrown222",
+            "userPic": "https://media.licdn.com/dms/image/C5603AQFalBYa6pW5cQ/profile-displayphoto-shrink_400_400/0/1631794528201?e=2147483647&v=beta&t=WSLAB5PJn8ERBGryKdsoum4eR1bSTu02cF2aUItRgiI",
+            "profession": "Barber",
+            "reviewText": "Michael is my go-to barber! He always gives me a fresh cut and pays attention to detail. The atmosphere in the barbershop is laid-back and welcoming. Highly recommend him!",
+            "rating": 5
+        }
     ]
     
 }

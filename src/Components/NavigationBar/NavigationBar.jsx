@@ -30,8 +30,8 @@ export default function NavigationBar() {
         <>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/find-jobs">Find Jobs</Link></li>
-            <li><Link to="/dashboard">Employers</Link></li>
-            <li><Link to="/dashboard">Candidates</Link></li>
+            <li><Link to="/find-candidates">Candidates</Link></li>
+            <li><Link to="/dashboard">Blog</Link></li>
             <li><Link to="/dashboard">Blog</Link></li>
             <li><Link to="/dashboard">Dashboard</Link></li>
         </>

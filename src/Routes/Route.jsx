@@ -9,6 +9,7 @@ import DashBoard from "../Pages/DashBoardPages/DashBoard";
 import UserProfile from "../Pages/DashBoardPages/UserProfile";
 import Home from "../Pages/Home/Home";
 import FindJobs from "../Pages/OthersPages/FindJobs";
+import FindCandidates from "../Pages/OthersPages/FindCandidates";
 
 export const router = createBrowserRouter([
   // main layout
@@ -24,6 +25,16 @@ export const router = createBrowserRouter([
         path: '/find-jobs',
         element: <FindJobs/>,
         loader: () => fetch('http://localhost:3000/posted_jobs')
+      },
+      {
+        path: '/find-jobs',
+        element: <FindJobs/>,
+        loader: () => fetch('http://localhost:3000/posted_jobs')
+      },
+      {
+        path: '/find-candidates',
+        element: <FindCandidates/> ,
+        loader: () => fetch('http://localhost:3000/candidates')
       },
       
     ]
