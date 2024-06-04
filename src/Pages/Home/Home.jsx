@@ -1,4 +1,5 @@
 import Banner from "../../Components/HomeSections/Banner";
+import HowItWorks from "../../Components/HomeSections/HowItWorks";
 import RecommendedJobs from "../../Components/HomeSections/RecommendedJobs di";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <Banner/>
       <RecommendedJobs/>
+      <HowItWorks/>
     </div>
   )
 }

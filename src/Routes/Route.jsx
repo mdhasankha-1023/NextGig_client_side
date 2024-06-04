@@ -8,6 +8,7 @@ import DashboardLayout from "../Layouts/DashboardLayout/DashboardLayout";
 import DashBoard from "../Pages/DashBoardPages/DashBoard";
 import UserProfile from "../Pages/DashBoardPages/UserProfile";
 import Home from "../Pages/Home/Home";
+import FindJobs from "../Pages/OthersPages/FindJobs";
 
 export const router = createBrowserRouter([
   // main layout
@@ -18,7 +19,13 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Home/>
-      }
+      },
+      {
+        path: '/find-jobs',
+        element: <FindJobs/>,
+        loader: () => fetch('/db.json')
+      },
+      
     ]
   },
 

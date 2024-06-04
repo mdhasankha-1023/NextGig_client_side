@@ -8,6 +8,12 @@ export default function RecommendedJobs() {
 
   const [jobs, setJobs] = useState([]);
 
+  const urgent = jobs.filter(job => job.job_action === 'urgent')
+  const featured = jobs.filter(job => job.job_action === 'Featured')
+
+  console.log(urgent)
+  console.log(featured)
+
   useEffect(() => {
     fetch('/db.json')
       .then(res => res.json())
@@ -36,7 +42,31 @@ export default function RecommendedJobs() {
             {/* Recent */}
             <TabPanel className="grid grid-cols-2 gap-x-12 gap-y-14">
               {
-                jobs.map(job =>
+                jobs
+                ?.slice(0, 4)
+                ?.map(job =>
+                  <JobCard key={job.id} job={job} />
+                )
+              }
+            </TabPanel>
+
+            {/* featured */}
+            <TabPanel className="grid grid-cols-2 gap-x-12 gap-y-14">
+              {
+                featured
+                ?.slice(0, 4)
+                .map(job =>
+                  <JobCard key={job.id} job={job} />
+                )
+              }
+            </TabPanel>
+
+            {/* urgent */}
+            <TabPanel className="grid grid-cols-2 gap-x-12 gap-y-14">
+              {
+                urgent
+                ?.slice(0, 4)
+                .map(job =>
                   <JobCard key={job.id} job={job} />
                 )
               }

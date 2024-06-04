@@ -29,7 +29,7 @@ export default function NavigationBar() {
     const lgNavLinks = (
         <>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/dashboard">Find Jobs</Link></li>
+            <li><Link to="/find-jobs">Find Jobs</Link></li>
             <li><Link to="/dashboard">Employers</Link></li>
             <li><Link to="/dashboard">Candidates</Link></li>
             <li><Link to="/dashboard">Blog</Link></li>
