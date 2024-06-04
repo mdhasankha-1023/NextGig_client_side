@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
       {
         path: '/find-jobs',
         element: <FindJobs/>,
-        loader: () => fetch('/db.json')
+        loader: () => fetch('http://localhost:3000/posted_jobs')
       },
       
     ]

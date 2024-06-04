@@ -11,20 +11,20 @@ export default function RecommendedJobs() {
   const urgent = jobs.filter(job => job.job_action === 'urgent')
   const featured = jobs.filter(job => job.job_action === 'Featured')
 
-  console.log(urgent)
-  console.log(featured)
+  // console.log(urgent)
+  // console.log(featured)
 
   useEffect(() => {
     fetch('/db.json')
       .then(res => res.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         setJobs(data.posted_jobs)
       })
       .catch(error => console.log(error))
   }, [])
 
-  console.log(jobs)
+  // console.log(jobs)
 
   return (
     <div className="my-20">

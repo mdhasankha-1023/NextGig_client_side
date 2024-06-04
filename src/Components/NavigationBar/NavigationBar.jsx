@@ -9,7 +9,7 @@ export default function NavigationBar() {
     const { user, logOut } = useAuth();
     const [toggle, setToggle] = useState(false)
     const navigate = useNavigate();
-    console.log(user)
+    // console.log(user)
 
     // handle sign out button
     const signOutBtn = () => {

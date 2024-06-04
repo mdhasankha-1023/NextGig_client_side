@@ -138,5 +138,84 @@
             ],
             "published_date": "2024-06-01"
         }
+    ],
+    "candidates": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john.doe@example.com",
+            "expertise": "Software Development",
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRy9rvA4ybNUm7EUvEfeQi-PwUNWf7IRWag&s",
+            "reviews": [
+                {
+                    "reviewer": "Alice Smith",
+                    "rating": 5,
+                    "comment": "Excellent work on the project!"
+                },
+                {
+                    "reviewer": "Bob Johnson",
+                    "rating": 4,
+                    "comment": "Great skills, but can improve on communication."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Jane Roe",
+            "email": "jane.roe@example.com",
+            "expertise": "Data Science",
+            "picture": "https://storyblok-cdn.photoroom.com/f/191576/1000x1000/38dc8dba9a/light_blue_background.webp/m/filters:quality(75)",
+            "reviews": [
+                {
+                    "reviewer": "Charlie Brown",
+                    "rating": 5,
+                    "comment": "Very insightful analysis!"
+                },
+                {
+                    "reviewer": "Dana White",
+                    "rating": 4,
+                    "comment": "Highly knowledgeable, but a bit slow on delivery."
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Mark Smith",
+            "email": "mark.smith@example.com",
+            "expertise": "Graphic Design",
+            "picture": "https://media.istockphoto.com/id/1171169127/photo/headshot-of-cheerful-handsome-man-with-trendy-haircut-and-eyeglasses-isolated-on-gray.jpg?s=612x612&w=0&k=20&c=yqAKmCqnpP_T8M8I5VTKxecri1xutkXH7zfybnwVWPQ=",
+            "reviews": [
+                {
+                    "reviewer": "Eve Davis",
+                    "rating": 5,
+                    "comment": "Creative and professional designs!"
+                },
+                {
+                    "reviewer": "Frank Harris",
+                    "rating": 3,
+                    "comment": "Good designs but needs to work on meeting deadlines."
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Emily Johnson",
+            "email": "emily.johnson@example.com",
+            "expertise": "Project Management",
+            "picture": "https://media.istockphoto.com/id/656673020/photo/handsome-in-spectacles.jpg?s=612x612&w=0&k=20&c=klIlcueGJlAnOehrIZNpvFrVT_olKKqhaVT77H5Fj-s=",
+            "reviews": [
+                {
+                    "reviewer": "Grace Lee",
+                    "rating": 4,
+                    "comment": "Efficient and organized manager."
+                },
+                {
+                    "reviewer": "Henry King",
+                    "rating": 5,
+                    "comment": "Excellent leadership and communication skills."
+                }
+            ]
+        }
     ]
+    
 }
