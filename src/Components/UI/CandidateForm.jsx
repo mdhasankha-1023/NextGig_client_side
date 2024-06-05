@@ -5,7 +5,7 @@ import PrimaryTitle from "./PrimaryTitle";
 import SocialMedeaButton from "./SocialMedeaButton";
 
 // eslint-disable-next-line react/prop-types
-export default function CandidateForm({onInput, onGoogle, onFacebook}) {
+export default function CandidateForm({ onInput, onGoogle, onFacebook }) {
     return (
         <>
             <PrimaryTitle text={'Create Account'} />
@@ -14,21 +14,34 @@ export default function CandidateForm({onInput, onGoogle, onFacebook}) {
                 onSubmit={onInput}
                 className="card-body gap-6">
                 {/* username */}
-                <InputFiled icon={'user'} type={'text'} name={'userName'} placeholder={'Username'} />
+                <InputFiled icon={'user'} type={'text'} name={'name'} placeholder={'Username'} />
 
-                {/* email */}
-                <InputFiled icon={'email'} type={'email'} name={'email'} placeholder={'Email'} />
+                <div className="flex gap-10">
+                    {/* email */}
+                    <div className="w-1/2">
+                        <InputFiled icon={'email'} type={'email'} name={'email'} placeholder={'Email'} />
 
-                {/* password */}
-                <InputFiled
-                    icon={'password'}
-                    type={'password'} name={'password'} placeholder={'Password'} />
+                    </div>
+                    {/* phone number */}
+                    <InputFiled icon={'phone'} type={'number'} name={'phnNumber'} placeholder={'Phone Number'} />
+                </div>
+                <div className="flex gap-10">
+                    {/* password */}
+                    <div className="w-1/2">
+                        <InputFiled
+                            icon={'password'}
+                            type={'password'} name={'password'} placeholder={'Password'} />
 
-                {/* confirm password */}
-                <InputFiled
-                    icon={'password'}
-                    type={'password'} placeholder={'Confirm Password'} />
-
+                    </div>
+                    {/* confirm password */}
+                    <div className="w-1/2">
+                        <InputFiled
+                            icon={'password'}
+                            type={'password'} placeholder={'Confirm Password'} />
+                    </div>
+                </div>
+                {/* user pic */}
+                <InputFiled icon={'url'} type={'text'} name={'picUrl'} placeholder={'User picture URL'} />
                 <div className="form-control mt-6">
                     <Buttons type={'submit'} value={'Sign Up'} />
                 </div>

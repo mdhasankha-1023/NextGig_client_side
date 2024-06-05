@@ -12,7 +12,7 @@ export default function EmployerForm({onInput, onGoogle,  onFacebook}) {
                 onSubmit={onInput}
                 className="card-body gap-6">
                 {/* company name */}
-                <InputFiled icon={'user'} type={'text'} name={'companyName'} placeholder={'Company Name'} />
+                <InputFiled icon={'user'} type={'text'} name={'name'} placeholder={'Company Name'} />
 
                 <div className="flex gap-10">
                     {/* password */}
@@ -23,7 +23,7 @@ export default function EmployerForm({onInput, onGoogle,  onFacebook}) {
                     </div>
                     {/* confirm password */}
                     {/* email */}
-                    <InputFiled icon={'phone'} type={'number'} name={'number'} placeholder={'Phone Number'} />
+                    <InputFiled icon={'phone'} type={'number'} name={'phnNumber'} placeholder={'Phone Number'} />
                 </div>
                 <div className="flex gap-10">
                     {/* password */}
@@ -42,7 +42,7 @@ export default function EmployerForm({onInput, onGoogle,  onFacebook}) {
                 </div>
 
                 {/* company logo */}
-                <InputFiled icon={'url'} type={'text'} name={'companyLogo'} placeholder={'Company logo URL'} />
+                <InputFiled icon={'url'} type={'text'} name={'picUrl'} placeholder={'Company logo URL'} />
                 <div className="form-control mt-6">
                     <Buttons type={'submit'} value={'Sign Up'} />
                 </div>

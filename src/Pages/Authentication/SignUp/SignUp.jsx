@@ -13,15 +13,18 @@ export default function SignUp() {
   const signUpBtn = (event) => {
     event.preventDefault();
     const form = event.target;
-    const userName = form.userName.value;
+    const name = form.name.value; 
+    const phone = form.phnNumber.value; 
+    const picUrl = form.picUrl.value;
     const email = form.email.value;
     const password = form.password.value;
+    const userInfo = { name, email, picUrl,phone}
+    console.log(userInfo)
 
     createNewUser(email, password)
       .then(res => {
         const user = res.user;
-        const userInfo = { userName, email, userPic: user?.photoURL}
-
+        console.log(user)
         fetch('http://localhost:5000/users', {
           method: 'POST',
           headers: {
@@ -46,9 +49,9 @@ export default function SignUp() {
         const user = res.user;
         console.log(user)
         const userInfo = {
-          userName: user.displayName,
+          name: user.displayName,
           email: user.email,
-          userPic: user.photoURL
+          picUrl: user.photoURL
         }
         fetch('http://localhost:5000/users', {
           method: 'POST',

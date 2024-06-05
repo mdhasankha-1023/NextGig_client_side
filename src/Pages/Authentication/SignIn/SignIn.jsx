@@ -33,9 +33,9 @@ export default function SignIn() {
         const user = res.user;
         console.log(user)
         const userInfo = {
-          userName: user.displayName,
+          name: user.displayName,
           email: user.email,
-          userPic: user.photoURL
+          picUrl: user.photoURL
         }
         fetch('http://localhost:5000/users', {
           method: 'POST',
