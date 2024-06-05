@@ -8,14 +8,14 @@ export default function RecommendedJobs() {
 
   const [jobs, setJobs] = useState([]);
 
-  const urgent = jobs?.filter(job => job.job_action === 'urgent')
-  const featured = jobs?.filter(job => job.job_action === 'Featured')
+  const urgent = jobs?.filter(job => job.action === 'urgent')
+  const featured = jobs?.filter(job => job.action === 'Featured')
 
   // console.log(urgent)
   // console.log(featured)
 
   useEffect(() => {
-      fetch('http://localhost:3000/posted_jobs')
+      fetch('http://localhost:5000/jobs')
       .then(res => res.json())
       .then(data => {
         // console.log(data)

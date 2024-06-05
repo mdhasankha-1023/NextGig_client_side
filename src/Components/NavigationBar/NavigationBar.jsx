@@ -31,8 +31,7 @@ export default function NavigationBar() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/find-jobs">Find Jobs</Link></li>
             <li><Link to="/find-candidates">Candidates</Link></li>
-            <li><Link to="/dashboard">Blog</Link></li>
-            <li><Link to="/dashboard">Blog</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
             <li><Link to="/dashboard">Dashboard</Link></li>
         </>
     )
@@ -47,10 +46,11 @@ export default function NavigationBar() {
                 }
             </li>
 
-            <li><a>Item 1</a></li>
-            <li><a>Item 1</a></li>
-            <li><a>Item 3</a></li>
-            <li><a>Item 3</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/find-jobs">Find Jobs</Link></li>
+            <li><Link to="/find-candidates">Candidates</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/dashboard">Dashboard</Link></li>
             <li>
                 {
                     user ? <div className="flex flex-col justify-center items-center gap-4">
