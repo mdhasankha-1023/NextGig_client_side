@@ -51,7 +51,8 @@ export const router = createBrowserRouter([
       },
       {
         path: '/dashboard/user-profile',
-        element: <UserProfile/>
+        element: <UserProfile/>,
+        loader: ()=> fetch('http://localhost:5000/users')
       },
     ]
   },

@@ -1,7 +1,7 @@
 import { EnvelopeIcon, KeyIcon, UserIcon, LinkIcon, PhoneIcon } from "@heroicons/react/24/outline";
 
 // eslint-disable-next-line react/prop-types
-export default function InputFiled({ name, type, placeholder, icon, labelText }) {
+export default function InputFiled({ name, type, placeholder, icon, labelText, defaultText, isTrue }) {
 
     // icon type
     const user = (<UserIcon className="size-6 text-blue-500" />)
@@ -16,7 +16,7 @@ export default function InputFiled({ name, type, placeholder, icon, labelText })
 
         <div className="form-control">
             <label className="label">
-                <span className="label-text text-md font-bold">{labelText}</span>
+                <span className="label-text text-xl font-bold">{labelText}</span>
             </label>
             <label className="input input-bordered flex items-center gap-2">
                 {icon === 'user' && user}
@@ -28,7 +28,9 @@ export default function InputFiled({ name, type, placeholder, icon, labelText })
                     name={`${name}`}
                     type={`${type}`}
                     placeholder={`${placeholder}`}
+                    defaultValue={`${defaultText}`}
                     className="grow"
+                    readOnly={isTrue}
                 />
             </label>
         </div>
