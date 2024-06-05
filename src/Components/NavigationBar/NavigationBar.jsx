@@ -71,7 +71,7 @@ export default function NavigationBar() {
 
 
     return (
-        <div className="navbar bg-none fixed top-0">
+        <div className="navbar bg-primaryBg fixed top-0">
             <div className="lg:navbar-start justify-between">
 
                 {/* company logo */}

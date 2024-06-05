@@ -33,7 +33,7 @@ export default function RecommendedJobs() {
       {/* tabs */}
       <div className='text-center w-full mt-8'>
         <Tabs variant='soft-rounded'>
-          <TabList>
+          <TabList style={{justifyContent: 'center', gap: '40px'}}>
             <Tab _selected={{ color: 'white', bg: '#1967D2', fontSize: '22px' }}>Recent</Tab>
             <Tab _selected={{ color: 'white', bg: '#1967D2', fontSize: '22px' }}>Featured</Tab>
             <Tab _selected={{ color: 'white', bg: '#1967D2', fontSize: '22px' }}>Urgent</Tab>

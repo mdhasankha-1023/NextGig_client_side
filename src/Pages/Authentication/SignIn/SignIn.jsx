@@ -3,7 +3,7 @@ import Form from "../../../Components/UI/Form";
 import useAuth from "../../../Hooks/useAuth";
 
 export default function SignIn() {
-  const { login } = useAuth();
+  const { login, google, facebook } = useAuth();
   const navigate = useNavigate();
 
   // authentication with email and pass
@@ -25,10 +25,34 @@ export default function SignIn() {
 
   }
 
+  // sign up with google
+  const signUpWithGoogle = () => {
+
+    google()
+      .then(res => {
+        const user = res.user;
+        console.log(user)
+        navigate('/')
+      })
+      .catch(error => console.log(error))
+  }
+
+  // sign up with facebook
+  const signUpWithFacebook = () => {
+
+    facebook()
+      .then(res => {
+        const user = res.user;
+        console.log(user)
+        navigate('/')
+      })
+      .catch(error => console.log(error))
+  }
+
 
   return (
     <div>
-      <Form onInput={signInBtn} />
+      <Form type={'signIn'} onFacebook={signUpWithFacebook} onGoogle={signUpWithGoogle} onInput={signInBtn} />
     </div>
   )
 }
