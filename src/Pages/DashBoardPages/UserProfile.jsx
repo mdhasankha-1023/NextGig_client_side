@@ -1,7 +1,6 @@
 import { useState } from "react";
 import ProfileForm from "../../Components/UI/ProfileForm";
 import ProfileInfo from "../../Components/UI/ProfileInfo";
-import UserAvatar from "../../Components/UI/UserAvatar";
 import useAuth from "../../Hooks/useAuth";
 import { useLoaderData } from "react-router-dom";
 
@@ -26,8 +25,9 @@ export default function UserProfile() {
     const phone = form.phone.value;
     const nationality = form.nationality.value;
     const address = form.address.value;
+    const picUrl = form.picUrl.value;
     const about = form.about.value;
-    const userInfo = { userName, email,phone, nationality, address, about}
+    const userInfo = { userName, email,phone, nationality, address, about, picUrl}
     console.log(userInfo)
 
     fetch(`http://localhost:5000/users/${currentUser?._id}`, {
@@ -38,15 +38,17 @@ export default function UserProfile() {
           body: JSON.stringify(userInfo)
         })
           .then(res => res.json())
-          .then(data => console.log(data))
+          .then(data => {
+            console.log(data)
+            setShow(!show)
+
+            })
+              
           .catch(error => console.log(error))
   }
 
   return (
     <div className="w-11/12 flex flex-col gap-10 justify-center">
-      <div className="divider">
-        <UserAvatar size={'w-28'} type={'withPic'} />
-      </div>
       {
         show ?
           <ProfileForm onSaveChange={saveChangeBtn} info={currentUser} onShow={isShowed} />

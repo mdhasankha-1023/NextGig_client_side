@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import Buttons from "./Buttons";
+import UserAvatar from "./UserAvatar";
 
 // eslint-disable-next-line react/prop-types
-export default function ProfileInfo({onShow, info}) {
+export default function ProfileInfo({ onShow, info }) {
     // const {userName, email, phone, address, about, nationality} = info;
     console.log(info)
 
@@ -10,7 +11,8 @@ export default function ProfileInfo({onShow, info}) {
         <div className="hero bg-base-200">
             <div className="w-full">
                 <div className="card w-full shadow-2xl bg-base-100 py-12 px-10">
-                    <div className="flex justify-end">
+                    <div className="flex justify-between items-center">
+                        <UserAvatar url={info?.picUrl} size={'w-28'} type={'withPic'} />
                         <Buttons handler={onShow} style={'px-8 py-2'} value={'EDIT'} />
                     </div>
                     {/* first row */}

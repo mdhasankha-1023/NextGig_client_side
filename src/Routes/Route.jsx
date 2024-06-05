@@ -10,6 +10,8 @@ import UserProfile from "../Pages/DashBoardPages/UserProfile";
 import Home from "../Pages/Home/Home";
 import FindJobs from "../Pages/OthersPages/FindJobs";
 import FindCandidates from "../Pages/OthersPages/FindCandidates";
+import PostJob from "../Pages/DashBoardPages/PostJob";
+import Manage from "../Pages/DashBoardPages/Manage";
 
 export const router = createBrowserRouter([
   // main layout
@@ -53,6 +55,15 @@ export const router = createBrowserRouter([
         path: '/dashboard/user-profile',
         element: <UserProfile/>,
         loader: ()=> fetch('http://localhost:5000/users')
+      },
+      {
+        path: '/dashboard/manage',
+        element: <Manage/>,
+        loader: ()=> fetch('http://localhost:5000/jobs')
+      },
+      {
+        path: '/dashboard/post-job',
+        element: <PostJob/>
       },
     ]
   },

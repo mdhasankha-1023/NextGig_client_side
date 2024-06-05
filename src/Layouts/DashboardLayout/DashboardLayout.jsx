@@ -13,6 +13,9 @@ export default function DashboardLayout() {
     <>
     <li><Link to={'/dashboard'}><RiDashboardFill />User Dashboard</Link></li>
     <li><Link to={'/dashboard/user-profile'}><CgProfile />Profile</Link></li>
+    <li><Link to={'/dashboard/manage'}><CgProfile />Manage</Link></li>
+    <li><Link to={'/dashboard/post-job'}><CgProfile />Add Jobs</Link></li>
+    <li><Link to={'/dashboard/user-profile'}><CgProfile />Enrolled Jobs</Link></li>
     </>
   )
 

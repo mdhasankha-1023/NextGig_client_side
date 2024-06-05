@@ -60,6 +60,14 @@ export default function ProfileForm({info, onSaveChange }) {
                                 defaultText={info?.address}
                             />
                         </div>
+                        {/* forth row */}
+                        <div className="form-control mt-6">
+                            {/* username */}
+                            <InputFiled type={'text'} name={'picUrl'} placeholder={'Picture URL'}
+                                labelText={'Picture URL'}
+                                defaultText={info?.picUrl}
+                            />
+                        </div>
                         <div className="mt-6 form-control ">
                             <label className="label">
                                 <span className="label-text text-xl font-bold">Full Address</span>
