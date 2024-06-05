@@ -9,7 +9,7 @@ export default function TopRegisteredCompany() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/reviews')
+    fetch('http://localhost:5000/topCompanies')
       .then(res => res.json())
       .then(data => {
         // console.log(data)

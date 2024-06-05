@@ -81,7 +81,6 @@
     ],
     "candidates": [
         {
-            "id": 1,
             "name": "John Doe",
             "email": "john.doe@example.com",
             "expertise": "Software Development",
@@ -100,7 +99,6 @@
             ]
         },
         {
-            "id": 2,
             "name": "Jane Roe",
             "email": "jane.roe@example.com",
             "expertise": "Data Science",
@@ -119,7 +117,6 @@
             ]
         },
         {
-            "id": 3,
             "name": "Mark Smith",
             "email": "mark.smith@example.com",
             "expertise": "Graphic Design",
@@ -138,7 +135,6 @@
             ]
         },
         {
-            "id": 4,
             "name": "Emily Johnson",
             "email": "emily.johnson@example.com",
             "expertise": "Project Management",
@@ -159,7 +155,6 @@
     ],
     "reviews": [
         {
-            "id": 1,
             "userName": "EmmaSmith123",
             "userPic": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
             "profession": "Hair Stylist",
@@ -167,7 +162,6 @@
             "rating": 5
         },
         {
-            "id": 2,
             "userName": "JohnDoe456",
             "userPic": "https://storyblok-cdn.photoroom.com/f/191576/1000x1000/38dc8dba9a/light_blue_background.webp/m/filters:quality(75)",
             "profession": "Manicurist",
@@ -175,7 +169,6 @@
             "rating": 4
         },
         {
-            "id": 3,
             "userName": "SarahParker789",
             "userPic": "https://media.licdn.com/dms/image/D4D03AQFKaV5CBRa02Q/profile-displayphoto-shrink_400_400/0/1665170161440?e=2147483647&v=beta&t=l5ntVKIKv9jw3BzCEzlc1kvUmeD7IBNMwuRXwLGbAsc",
             "profession": "Makeup Artist",
@@ -183,7 +176,6 @@
             "rating": 5
         },
         {
-            "id": 4,
             "userName": "DavidJohnson101",
             "userPic": "https://media.licdn.com/dms/image/D5603AQEBAa5-yXCr2A/profile-displayphoto-shrink_400_400/0/1708694272691?e=2147483647&v=beta&t=Ogeqw77-6dcurRDE1__PjYXDGkwnWWhTMyKW_kFk5D0",
             "profession": "Masseuse",
@@ -191,7 +183,6 @@
             "rating": 5
         },
         {
-            "id": 5,
             "userName": "EmilyWilson777",
             "userPic": "https://media.licdn.com/dms/image/D4D03AQGflfU4uZNFgg/profile-displayphoto-shrink_400_400/0/1692123245905?e=2147483647&v=beta&t=Kh6lBHUC-arn4MHeh6pJNc95pVEQD9XwYjv_ovvPnjQ",
             "profession": "Esthetician",
@@ -199,7 +190,6 @@
             "rating": 4
         },
         {
-            "id": 6,
             "userName": "MichaelBrown222",
             "userPic": "https://media.licdn.com/dms/image/C5603AQFalBYa6pW5cQ/profile-displayphoto-shrink_400_400/0/1631794528201?e=2147483647&v=beta&t=WSLAB5PJn8ERBGryKdsoum4eR1bSTu02cF2aUItRgiI",
             "profession": "Barber",

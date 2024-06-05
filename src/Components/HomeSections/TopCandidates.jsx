@@ -8,7 +8,7 @@ export default function TopCandidates() {
   const [candidates, setCandidates] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/candidates')
+    fetch('http://localhost:5000/candidates')
       .then(res => res.json())
       .then(data => {
         // console.log(data)

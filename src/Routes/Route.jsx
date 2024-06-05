@@ -14,6 +14,7 @@ import PostJob from "../Pages/DashBoardPages/PostJob";
 import Manage from "../Pages/DashBoardPages/Manage";
 import PostJobUpdate from "../Pages/DashBoardPages/PostJobUpdate";
 import JobDetails from "../Pages/OthersPages/JobDetails";
+import Blog from "../Pages/OthersPages/Blog";
 
 export const router = createBrowserRouter([
   // main layout
@@ -28,22 +29,27 @@ export const router = createBrowserRouter([
       {
         path: '/find-jobs',
         element: <FindJobs/>,
-        loader: () => fetch('http://localhost:3000/posted_jobs')
+        loader: () => fetch('http://localhost:5000/jobs')
       },
       {
         path: '/find-jobs',
         element: <FindJobs/>,
-        loader: () => fetch('http://localhost:3000/posted_jobs')
+        loader: () => fetch('http://localhost:5000/jobs')
       },
       {
         path: '/find-candidates',
         element: <FindCandidates/> ,
-        loader: () => fetch('http://localhost:3000/candidates')
+        loader: () => fetch('http://localhost:5000/candidates')
       },
       {
         path: '/job-details/:id',
         element: <JobDetails/>,
         loader: () => fetch('http://localhost:5000/jobs')
+      },
+      {
+        path: '/blog',
+        element: <Blog/>,
+        loader: () => fetch('http://localhost:5000/blog')
       },
       
     ]
