@@ -22,18 +22,18 @@ export default function JobCard({ job, type }) {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, add it!"
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-              fetch(`http://localhost:5000/jobs/${_id}`, {
-                method: 'DELETE',
-              })
-                .then(res => res.json())
-                .then(data => {
-                  console.log(data);
+                fetch(`http://localhost:5000/jobs/${_id}`, {
+                    method: 'DELETE',
                 })
-                .catch(error => console.log(error.massage))
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                    })
+                    .catch(error => console.log(error.massage))
             }
-          });
+        });
     }
 
 
@@ -65,7 +65,9 @@ export default function JobCard({ job, type }) {
                 {
                     type === 'manage' ?
                         <div className="card-actions justify-center gap-4">
-                            <Buttons value={'Details'} />
+                            <Link to={`/job-details/${_id}`}>
+                                <Buttons value={'Details'} />
+                            </Link>
                             <Link to={`/dashboard/job-update/${_id}`}>
                                 <Buttons value={'Update'} />
                             </Link>
@@ -73,7 +75,9 @@ export default function JobCard({ job, type }) {
                         </div>
                         :
                         <div className="card-actions justify-end">
-                            <Buttons value={'Apply'} />
+                            <Link to={`/job-details/${_id}`}>
+                                <Buttons value={'Apply'} />
+                            </Link>
                         </div>
                 }
 
