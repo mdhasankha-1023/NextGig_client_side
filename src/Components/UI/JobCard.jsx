@@ -4,11 +4,37 @@ import { FaShoppingBag } from "react-icons/fa";
 import { FaLocationPin } from "react-icons/fa6";
 import { FaMoneyBill1Wave } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 // eslint-disable-next-line react/prop-types
 export default function JobCard({ job, type }) {
     // eslint-disable-next-line react/prop-types
     const { _id, companyLogo, jobTitle, salary, address, variant, post, action } = job;
+
+    // handleRemoveBtn
+    const handleRemoveBtn = () => {
+        console.log(_id)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won add this service!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, add it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              fetch(`http://localhost:5000/jobs/${_id}`, {
+                method: 'DELETE',
+              })
+                .then(res => res.json())
+                .then(data => {
+                  console.log(data);
+                })
+                .catch(error => console.log(error.massage))
+            }
+          });
+    }
 
 
     return (
@@ -43,7 +69,7 @@ export default function JobCard({ job, type }) {
                             <Link to={`/dashboard/job-update/${_id}`}>
                                 <Buttons value={'Update'} />
                             </Link>
-                            <Buttons value={'Remove'} />
+                            <Buttons handler={handleRemoveBtn} value={'Remove'} />
                         </div>
                         :
                         <div className="card-actions justify-end">
