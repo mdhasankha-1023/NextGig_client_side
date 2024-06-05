@@ -12,6 +12,7 @@ import FindJobs from "../Pages/OthersPages/FindJobs";
 import FindCandidates from "../Pages/OthersPages/FindCandidates";
 import PostJob from "../Pages/DashBoardPages/PostJob";
 import Manage from "../Pages/DashBoardPages/Manage";
+import PostJobUpdate from "../Pages/DashBoardPages/PostJobUpdate";
 
 export const router = createBrowserRouter([
   // main layout
@@ -64,6 +65,11 @@ export const router = createBrowserRouter([
       {
         path: '/dashboard/post-job',
         element: <PostJob/>
+      },
+      {
+        path: '/dashboard/job-update/:id',
+        element: <PostJobUpdate/>,
+        loader: ()=> fetch("http://localhost:5000/jobs")
       },
     ]
   },

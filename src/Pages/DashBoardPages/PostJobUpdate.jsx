@@ -1,11 +1,17 @@
-import Swal from "sweetalert2";
+import { useLoaderData, useParams } from "react-router-dom"
 import Buttons from "../../Components/UI/Buttons";
 import InputFiled from "../../Components/UI/InputFiled";
 import PrimaryTitle from "../../Components/UI/PrimaryTitle";
+import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
 
-export default function PostJob() {
-  const { user } = useAuth();
+export default function PostJobUpdate() {
+  const {user} = useAuth();
+  const { id } = useParams();
+  const jobs = useLoaderData();
+
+  const existingJob = jobs.find(job => job._id === id)
+  console.log(existingJob)
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,10 +26,10 @@ export default function PostJob() {
     const post = form.post.value;
     const level = form.level.value;
     const action = form.action.value;
-    const variant = form.variant.value;
     const jobTitle = form.jobTitle.value;
+    const variant = form.variant.value;
     
-    const info = {jobTitle, post, level, action, variant, companyLogo, userName, phone, email, salary, address, details }
+    const info = { post, level, action, variant, companyLogo, userName, phone, email, salary, address, details, jobTitle }
     console.log(info)
 
     Swal.fire({
@@ -36,8 +42,8 @@ export default function PostJob() {
       confirmButtonText: "Yes, add it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch('http://localhost:5000/jobs', {
-          method: 'POST',
+        fetch(`http://localhost:5000/jobs/${existingJob?._id}`, {
+          method: 'PATCH',
           headers: {
             'Content-type': 'application/json'
           },
@@ -64,12 +70,12 @@ export default function PostJob() {
           <form onSubmit={handleSubmit}
             // onSubmit={onInput}
             className="card-body gap-6">
-            <PrimaryTitle text={'My Profile'} />
+            <PrimaryTitle text={'Update Job Info'} />
             {/* first row */}
             <div className="flex gap-10 justify-center items-center w-full">
               <div className="w-1/2">
                 {/* username */}
-                <InputFiled type={'text'} name={'userName'} placeholder={'Name'}
+                <InputFiled defaultText={existingJob?.userName} type={'text'} name={'userName'} placeholder={'Name'}
                   labelText={'Name'}
                 />
               </div>
@@ -88,14 +94,14 @@ export default function PostJob() {
             <div className="flex gap-10 justify-center items-center w-full">
               <div className="w-1/2">
                 {/* username */}
-                <InputFiled type={'text'} name={'jobTitle'} placeholder={'Job Title'}
+                <InputFiled defaultText={existingJob?.jobTitle} type={'text'} name={'jobTitle'} placeholder={'Job Title'}
                   labelText={'Job Title'}
                 // defaultText={info?.phone}
                 />
               </div>
               <div className="w-1/2">
                 {/* username */}
-                <InputFiled type={'text'} name={'phone'} placeholder={'Valid Phone Number'}
+                <InputFiled defaultText={existingJob?.phone} type={'text'} name={'phone'} placeholder={'Valid Phone Number'}
                   labelText={'Phone Number'}
                 />
               </div>
@@ -105,7 +111,7 @@ export default function PostJob() {
 
               {/* job post */}
               <div className='w-1/5'>
-                <select name="post" className="select select-bordered w-full">
+                <select defaultValue={existingJob?.post} name="post" className="select select-bordered w-full">
                   <option disabled selected>Post</option>
                   <option>Developer</option>
                   <option>Designer</option>
@@ -116,7 +122,7 @@ export default function PostJob() {
 
               {/* level */}
               <div className='w-1/5'>
-                <select name="level" className="select select-bordered w-full">
+                <select defaultValue={existingJob?.level} name="level" className="select select-bordered w-full">
                   <option disabled selected>Job level</option>
                   <option>Full-time</option>
                   <option>Contact</option>
@@ -126,7 +132,7 @@ export default function PostJob() {
 
               {/* variant */}
               <div className='w-1/5'>
-                <select name="variant" className="select select-bordered w-full">
+                <select defaultValue={existingJob?.variant} name="variant" className="select select-bordered w-full">
                   <option disabled selected>Duty Variant</option>
                   <option>Onsite</option>
                   <option>High-bride</option>
@@ -136,7 +142,7 @@ export default function PostJob() {
 
               {/* action */}
               <div className='w-1/5'>
-                <select name="action" className="select select-bordered w-full">
+                <select defaultValue={existingJob?.action} name="action" className="select select-bordered w-full">
                   <option disabled selected>Job Action</option>
                   <option>Urgent</option>
                   <option>Featured</option>
@@ -145,7 +151,7 @@ export default function PostJob() {
 
               {/* salary */}
               <div className='w-1/5'>
-                <select name="salary" className="select select-bordered w-full">
+                <select defaultValue={existingJob?.salary} name="salary" className="select select-bordered w-full">
                   <option disabled selected>Salary</option>
                   <option>$100-150</option>
                   <option>$150-200</option>
@@ -158,7 +164,7 @@ export default function PostJob() {
             {/* third row */}
             <div className="form-control mt-6">
               {/* username */}
-              <InputFiled type={'text'} name={'address'} placeholder={'Company Full Address'}
+              <InputFiled defaultText={existingJob?.address} type={'text'} name={'address'} placeholder={'Company Full Address'}
                 labelText={'Company Address'}
               // defaultText={info?.address}
               />
@@ -166,7 +172,7 @@ export default function PostJob() {
             {/* forth row */}
             <div className="form-control mt-6">
               {/* username */}
-              <InputFiled type={'text'} name={'companyLogo'} placeholder={'Company Logo URL'}
+              <InputFiled defaultText={existingJob?.companyLogo} type={'text'} name={'companyLogo'} placeholder={'Company Logo URL'}
                 labelText={'Company Logo'}
               />
             </div>
@@ -175,7 +181,7 @@ export default function PostJob() {
                 <span className="label-text text-xl font-bold">Job Description</span>
               </label>
               {/* about */}
-              <textarea placeholder="About this job..."
+              <textarea defaultValue={existingJob?.details} placeholder="About this job..."
                 name="details" className="textarea textarea-bordered textarea-lg"></textarea>
             </div>
             <div className="form-control mt-6">

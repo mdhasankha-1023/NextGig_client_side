@@ -1,7 +1,7 @@
 import { EnvelopeIcon, KeyIcon, UserIcon, LinkIcon, PhoneIcon } from "@heroicons/react/24/outline";
 
 // eslint-disable-next-line react/prop-types
-export default function InputFiled({ name, type, placeholder, icon, labelText, isTrue }) {
+export default function InputFiled({ name, type, placeholder, icon, labelText, isTrue, defaultText }) {
 
     // icon type
     const user = (<UserIcon className="size-6 text-blue-500" />)
@@ -28,7 +28,7 @@ export default function InputFiled({ name, type, placeholder, icon, labelText, i
                     name={`${name}`}
                     type={`${type}`}
                     placeholder={`${placeholder}`}
-                    // defaultValue={`${defaultText}`}
+                    defaultValue={`${defaultText}`}
                     className="grow"
                     readOnly={isTrue}
                 />

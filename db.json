@@ -1,141 +1,81 @@
 {
     "posted_jobs": [
         {
-            "id": 1,
-            "company_logo": "https://isledsign.com/wp-content/uploads/2020/07/Custom-3D-Logo-Sign-Office-Lobby-Signs-Lettering-Factory.jpg",
+            "email" : "mdhasankha.wd@gmail.com",
+            "companyLogo": "https://isledsign.com/wp-content/uploads/2020/07/Custom-3D-Logo-Sign-Office-Lobby-Signs-Lettering-Factory.jpg",
             "post" : "developer",
-            "job_title": "Software Engineer",
-            "job_level": "Full-time",
+            "jobTitle": "Software Engineer",
+            "level": "Full-time",
             "salary": "$90,000 - $120,000",
             "address": "123 Main St, Springfield, IL",
-            "duty_variant": "On-site",
-            "job_action": "urgent",
-            "job_description": "We are looking for a skilled software engineer to join our dynamic team.",
-            "key_responsibilities": [
-                "Develop and maintain web applications",
-                "Collaborate with cross-functional teams",
-                "Write clean, scalable code"
-            ],
-            "job_requirements": [
-                "Bachelor's degree in Computer Science or related field",
-                "3+ years of software development experience",
-                "Proficiency in JavaScript and Python"
-            ],
+            "variant": "On-site",
+            "action": "urgent",
+            "details": "We are looking for a skilled software engineer to join our dynamic team.",
             "published_date": "2024-06-01"
         },
         {
-            "id": 2,
-            "company_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpePCAIVbqbJrqXwDafeV6As5Cy7ABNCm_dA&s",
-            "job_title": "Marketing Manager",
+            "email" : "mdhasankha.wd@gmail.com",
+            "companyLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpePCAIVbqbJrqXwDafeV6As5Cy7ABNCm_dA&s",
+            "jobTitle": "Marketing Manager",
             "post" : "designer",
-            "job_level": "Full-time",
+            "level": "Full-time",
             "salary": "$70,000 - $90,000",
             "address": "456 Elm St, Metropolis, NY",
-            "duty_variant": "Remote",
-            "job_action": "urgent",
-            "job_description": "Seeking an experienced marketing manager to lead our marketing team.",
-            "key_responsibilities": [
-                "Develop marketing strategies",
-                "Manage marketing campaigns",
-                "Analyze market trends"
-            ],
-            "job_requirements": [
-                "Bachelor's degree in Marketing or related field",
-                "5+ years of marketing experience",
-                "Excellent communication skills"
-            ],
+            "variant": "Remote",
+            "action": "urgent",
+            "details": "Seeking an experienced marketing manager to lead our marketing team.",
             "published_date": "2024-05-28"
         },
         {
-            "id": 3,
-            "company_logo": "https://i.etsystatic.com/11394219/r/il/b98e96/4484634908/il_570xN.4484634908_5ctz.jpg",
-            "job_title": "Data Scientist",
+            "email" : "mdhasankha.wd@gmail.com",
+            "companyLogo": "https://i.etsystatic.com/11394219/r/il/b98e96/4484634908/il_570xN.4484634908_5ctz.jpg",
+            "jobTitle": "Data Scientist",
             "post" : "assistant",
-            "job_level": "Full-time",
+            "level": "Full-time",
             "salary": "$100,000 - $130,000",
             "address": "789 Oak St, Gotham, NJ",
-            "duty_variant": "Hybrid",
-            "job_action": "urgent",
-            "job_description": "Looking for a data scientist to analyze large datasets and provide insights.",
-            "key_responsibilities": [
-                "Analyze complex data sets",
-                "Develop predictive models",
-                "Collaborate with engineering teams"
-            ],
-            "job_requirements": [
-                "Master's degree in Data Science or related field",
-                "2+ years of experience in data analysis",
-                "Proficiency in R and Python"
-            ],
+            "variant": "Hybrid",
+            "action": "urgent",
+            "details": "Looking for a data scientist to analyze large datasets and provide insights.",
             "published_date": "2024-06-02"
         },
         {
-            "id": 4,
-            "company_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZsU1sgc6f2npoNgau-InapQ5HixWmg2GG4g&s",
-            "job_title": "UX Designer",
+            "email" : "mdhasankha.wd@gmail.com",
+            "companyLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZsU1sgc6f2npoNgau-InapQ5HixWmg2GG4g&s",
+            "jobTitle": "UX Designer",
             "post" : "manager",
-            "job_level": "Contract",
+            "level": "Contract",
             "salary": "$60,000 - $80,000",
             "address": "321 Birch St, Star City, CA",
-            "duty_variant": "Remote",
-            "job_action": "Featured",
-            "job_description": "We need a talented UX designer to improve our user interfaces.",
-            "key_responsibilities": [
-                "Design user-friendly interfaces",
-                "Conduct user research",
-                "Create wireframes and prototypes"
-            ],
-            "job_requirements": [
-                "Bachelor's degree in Design or related field",
-                "3+ years of UX design experience",
-                "Strong portfolio of design projects"
-            ],
+            "variant": "Remote",
+            "action": "Featured",
+            "details": "We need a talented UX designer to improve our user interfaces.",
             "published_date": "2024-05-30"
         },
         {
-            "id": 5,
-            "company_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpKfGe6px7ZQwAYeml3U2zQszY5uifV-75Tg&s",
-            "job_title": "Project Manager",
+            "email" : "mdhasankha.wd@gmail.com",
+            "companyLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpKfGe6px7ZQwAYeml3U2zQszY5uifV-75Tg&s",
+            "jobTitle": "Project Manager",
             "post" : "marketing",
-            "job_level": "Full-time",
+            "level": "Full-time",
             "salary": "$80,000 - $100,000",
             "address": "654 Pine St, Central City, TX",
-            "duty_variant": "On-site",
-            "job_action": "Featured",
-            "job_description": "Project manager needed to oversee project lifecycles.",
-            "key_responsibilities": [
-                "Plan and manage projects",
-                "Coordinate with teams",
-                "Ensure projects meet deadlines"
-            ],
-            "job_requirements": [
-                "Bachelor's degree in Business or related field",
-                "5+ years of project management experience",
-                "PMP certification preferred"
-            ],
+            "variant": "On-site",
+            "action": "Featured",
+            "details": "Project manager needed to oversee project lifecycles.",
             "published_date": "2024-06-03"
         },
         {
-            "id": 6,
-            "company_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNVhMR8N5XF-XsYg-a1iaRBdAxQ0ChgL3mWAh-eEZeX1jJTT09s50hsEFV5q-SmosPcuk&usqp=CAU",
-            "job_title": "HR Specialist",
+            "email" : "mdhasankha.wd@gmail.com",
+            "companyLogo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNVhMR8N5XF-XsYg-a1iaRBdAxQ0ChgL3mWAh-eEZeX1jJTT09s50hsEFV5q-SmosPcuk&usqp=CAU",
+            "jobTitle": "HR Specialist",
             "post" : "model",
-            "job_level": "Part-time",
+            "level": "Part-time",
             "salary": "$50,000 - $70,000",
             "address": "987 Cedar St, Coast City, FL",
-            "duty_variant": "On-site",
-            "job_action": "Featured",
-            "job_description": "HR specialist required to handle recruitment and employee relations.",
-            "key_responsibilities": [
-                "Manage recruitment process",
-                "Maintain employee records",
-                "Handle employee relations"
-            ],
-            "job_requirements": [
-                "Bachelor's degree in Human Resources or related field",
-                "2+ years of HR experience",
-                "Strong organizational skills"
-            ],
+            "variant": "On-site",
+            "action": "Featured",
+            "details": "HR specialist required to handle recruitment and employee relations.",
             "published_date": "2024-06-01"
         }
     ],
