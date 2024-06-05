@@ -8,18 +8,18 @@ export default function RecommendedJobs() {
 
   const [jobs, setJobs] = useState([]);
 
-  const urgent = jobs.filter(job => job.job_action === 'urgent')
-  const featured = jobs.filter(job => job.job_action === 'Featured')
+  const urgent = jobs?.filter(job => job.job_action === 'urgent')
+  const featured = jobs?.filter(job => job.job_action === 'Featured')
 
   // console.log(urgent)
   // console.log(featured)
 
   useEffect(() => {
-    fetch('/db.json')
+      fetch('http://localhost:3000/posted_jobs')
       .then(res => res.json())
       .then(data => {
         // console.log(data)
-        setJobs(data.posted_jobs)
+        setJobs(data)
       })
       .catch(error => console.log(error))
   }, [])
@@ -33,7 +33,7 @@ export default function RecommendedJobs() {
       {/* tabs */}
       <div className='text-center w-full mt-8'>
         <Tabs variant='soft-rounded'>
-          <TabList style={{justifyContent: 'center', gap: '40px'}}>
+          <TabList style={{ justifyContent: 'center', gap: '40px' }}>
             <Tab _selected={{ color: 'white', bg: '#1967D2', fontSize: '22px' }}>Recent</Tab>
             <Tab _selected={{ color: 'white', bg: '#1967D2', fontSize: '22px' }}>Featured</Tab>
             <Tab _selected={{ color: 'white', bg: '#1967D2', fontSize: '22px' }}>Urgent</Tab>
@@ -43,10 +43,10 @@ export default function RecommendedJobs() {
             <TabPanel className="grid grid-cols-2 gap-x-12 gap-y-14">
               {
                 jobs
-                ?.slice(0, 4)
-                ?.map(job =>
-                  <JobCard key={job.id} job={job} />
-                )
+                  ?.slice(0, 4)
+                  ?.map(job =>
+                    <JobCard key={job.id} job={job} />
+                  )
               }
             </TabPanel>
 
@@ -54,10 +54,10 @@ export default function RecommendedJobs() {
             <TabPanel className="grid grid-cols-2 gap-x-12 gap-y-14">
               {
                 featured
-                ?.slice(0, 4)
-                .map(job =>
-                  <JobCard key={job.id} job={job} />
-                )
+                  ?.slice(0, 4)
+                  ?.map(job =>
+                    <JobCard key={job.id} job={job} />
+                  )
               }
             </TabPanel>
 
@@ -65,10 +65,10 @@ export default function RecommendedJobs() {
             <TabPanel className="grid grid-cols-2 gap-x-12 gap-y-14">
               {
                 urgent
-                ?.slice(0, 4)
-                .map(job =>
-                  <JobCard key={job.id} job={job} />
-                )
+                  ?.slice(0, 4)
+                  .map(job =>
+                    <JobCard key={job.id} job={job} />
+                  )
               }
             </TabPanel>
 

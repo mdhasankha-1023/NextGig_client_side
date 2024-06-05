@@ -32,6 +32,21 @@ export default function SignIn() {
       .then(res => {
         const user = res.user;
         console.log(user)
+        const userInfo = {
+          userName: user.displayName,
+          email: user.email,
+          userPic: user.photoURL
+        }
+        fetch('http://localhost:5000/users', {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json'
+          },
+          body: JSON.stringify(userInfo)
+        })
+          .then(res => res.json())
+          .then(data => console.log(data))
+          .catch(error => console.log(error))
         navigate('/')
       })
       .catch(error => console.log(error))
